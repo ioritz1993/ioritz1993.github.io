@@ -3,9 +3,7 @@
 icon: fas fa-info-circle
 order: 4
 ---
-|aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa|aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa|
-|Ioritz Urrestarazu Simón|Elisa Alises Nuñez|
-|![Benjamin Bannekat](https://octodex.github.com/images/bannekat.png)|![Benjamin Bannekat](https://octodex.github.com/images/bannekat.png)|
+|![About us](https://raw.githubusercontent.com/ioritz1993/ioritz1993.github.io/main/assets/img/about-us.png)|
 
 Thank you for visiting our cybersecurity blog!
 
