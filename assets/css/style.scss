@@ -11,8 +11,9 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 
 .contact{
   display: flex;
-  flex-direction: column;
-  background-color: blue;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-right: 100px;
 }
 
 /* append your custom style below */
