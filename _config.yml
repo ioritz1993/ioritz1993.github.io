@@ -19,9 +19,9 @@ timezone: Europa/Madrid
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Red Team Lab                        # the main title
+title: Cybersecurity Notebook                        # the main title
 
-tagline: Pentesting Notes by Ioritz and Elisa   # it will display as the sub-title
+tagline: Cybersecurity Notebook by Ioritz and Elisa   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
