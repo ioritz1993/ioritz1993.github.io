@@ -19,9 +19,9 @@ timezone: Europa/Madrid
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Cybersecurity Notebook                        # the main title
+title: B00ckf0rH4ck                       # the main title
 
-tagline: Cybersecurity Notebook by Ioritz and Elisa   # it will display as the sub-title
+tagline: B00ckf0rH4ck by Ioritz and Elisa   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
