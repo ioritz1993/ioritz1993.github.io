@@ -1,0 +1,88 @@
+---
+---
+
+/*
+  If the number of TAB files has changed, the following variable is required.
+  And it must be defined before `@import`.
+*/
+$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
+
+@import "{{ site.theme }}";
+
+.contact{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.contact-child-left{
+  flex-basis: 50%;
+  white-space: nowrap;
+  padding-right: 20px;
+}
+
+.contact-child-right{
+  flex-basis: 50%;
+  white-space: nowrap;
+}
+
+.sidebar-contact{
+  width: 100% !important;
+  font-family: "Font Awesome Free";
+}
+.sidebar-space-contacts{
+  width: 100%;
+  margin: 0px;
+}
+
+.sidebar-space-diferent-contacts {
+  width: 100%;
+}
+
+#search-wrapper {
+  margin-right: 0rem !important;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+@media (max-width: 309px) {
+  .contact-child-left {
+    white-space: wrap;
+  }
+  .contact-child-right {
+    white-space: wrap;
+  }
+}
+@media (max-width: 849px) {
+  .sidebar-contact {
+    margin-left: 2rem;
+  }
+  #sidebar .sidebar-bottom {
+    margin-bottom: 80px !important;
+  }
+}
+@media (min-width: 850px) and (max-width: 1199px) {
+  .sidebar-contact {
+    margin-left: 1.5rem;
+  }
+  #sidebar .sidebar-bottom {
+    margin-bottom: 80px !important;
+  }
+}
+@media ((min-width: 1200px) and  (max-width: 1649px)) {
+  .sidebar-contact {
+    margin-left: 1.5rem;
+  }
+  #sidebar .sidebar-bottom {
+    margin-bottom: 80px !important;
+  }
+}
+@media (min-width: 1650px) {
+  #sidebar .site-subtitle {  
+    min-height: 0rem !important;
+  }
+  #sidebar ul {
+    margin-bottom: 1rem;
+  }
+}

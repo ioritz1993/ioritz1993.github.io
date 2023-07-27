@@ -1,0 +1,106 @@
+<!--
+  The Side Bar
+-->
+
+<div id="sidebar" class="d-flex flex-column align-items-end">
+  <div class="profile-wrapper text-center">
+    <div id="avatar">
+      <a href="{{ '/' | relative_url }}" class="mx-auto">
+        {% if site.avatar != empty and site.avatar %}
+        {% capture avatar_url %}
+        {% if site.avatar contains '://' %}
+        {{ site.avatar }}
+        {% elsif site.img_cdn != empty and site.img_cdn %}
+        {{ site.avatar | prepend: site.img_cdn }}
+        {% else %}
+        {{ site.avatar | relative_url }}
+        {% endif %}
+        {% endcapture %}
+        <img src="{{ avatar_url | strip }}" alt="avatar" onerror="this.style.display='none'">
+        {% endif %}
+      </a>
+    </div>
+
+    <div class="site-title">
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    </div>
+    <div class="site-subtitle font-italic">{{ site.tagline }}</div>
+
+  </div><!-- .profile-wrapper -->
+
+  <ul class="w-100">
+
+    <!-- home -->
+    <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
+      <a href="{{ '/' | relative_url }}" class="nav-link">
+        <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
+        <span>{{ site.data.locales[site.lang].tabs.home | upcase }}</span>
+      </a>
+    </li>
+    <!-- the real tabs -->
+    {% for tab in site.tabs %}
+    <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
+      <a href="{{ tab.url | relative_url }}" class="nav-link">
+        <i class="fa-fw {{ tab.icon }} ml-xl-3 mr-xl-3 unloaded"></i>
+        {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
+
+        <span>{{ site.data.locales[site.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+      </a>
+    </li> <!-- .nav-item -->
+    {% endfor %}
+
+  </ul> <!-- ul.nav.flex-column -->
+
+  <div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center">
+    <!-- =========================================================== -->
+    <span class="sidebar-contact">Ioritz Urrestarazu Simón</span>
+    <p class="sidebar-space-contacts"></p>
+    {% unless site.theme_mode %}
+    <!-- <button class="mode-toggle btn" aria-label="Switch Mode">
+      <i class="fas fa-adjust"></i>
+    </button> -->
+
+    {% if site.data.contact.size > 0 %}
+    <!-- <span class="icon-border"></span> -->
+    {% endif %}
+    {% endunless %}
+
+    {% for entry in site.data.contact %}
+    {% capture url %}
+    {%- if entry.type == 'github' -%}
+    https://github.com/{{ site.github.username }}
+    {%- elsif entry.type == 'twitter' -%}
+    https://twitter.com/{{ site.twitter.username }}
+    {%- elsif entry.type == 'email' -%}
+    {% assign email = site.social.email | split: '@' %}
+    javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
+    {%- elsif entry.type == 'rss' -%}
+    {{ "/feed.xml" | relative_url }}
+    {%- else -%}
+    {{ entry.url }}
+    {%- endif -%}
+    {% endcapture %}
+
+    {% if url %}
+    <a href="{{ url }}" aria-label="{{ entry.type }}" {% assign link_types=nil %} {% unless entry.noblank %} {% assign
+      link_types=link_types | append: " noopener" %} target="_blank" {% endunless %} {% if entry.type=='mastodon' %} {%
+      assign link_types=link_types | append: " me" %} {% endif %} {% if link_types %}rel="{{ link_types | lstrip }}" {%
+      endif %}>
+
+      <i class="{{ entry.icon }}"></i>
+    </a>
+    {% endif %}
+    {% endfor %}
+
+    <!-- =========================================================== -->
+    <p class="sidebar-space-diferent-contacts"></p><span class="sidebar-contact">Elisa Alises Núñez</span>
+    <p class="sidebar-space-contacts"></p><a href="https://github.com/Creanyx0" aria-label="github" target="_blank"
+      rel="noopener"> <i class="fab fa-github"></i> </a> <a
+      href=" javascript:location.href = 'mailto:' + ['ealinun','gmail.com'].join('@')"
+      aria-label="email"> <i class="fas fa-envelope"></i> </a> <a
+      href="https://www.linkedin.com/in/elisa-alises-n%C3%BA%C3%B1ez-9a4325248/" aria-label="linkedin" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin"></i> </a> <a href="https://app.hackthebox.com/profile/1071401" aria-label="hackthebox"
+      target="_blank" rel="noopener"> <i class="fa-solid fa-box"></i> </a>
+  </div> <!-- .sidebar-bottom -->
+
+</div><!-- #sidebar -->

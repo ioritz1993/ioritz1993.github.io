@@ -1,0 +1,22 @@
+## Template › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#setting-author-url
+# -------------------------------------
+# {author_id}:
+#   name: {full name}
+#   twitter: {twitter_of_author}
+#   url: {homepage_of_author}
+# -------------------------------------
+
+ioritz:
+  name: Ioritz Urrestarazu Simón
+  #twitter: cotes2020
+  url: https://github.com/ioritz1993
+
+elisa:
+  name: Elisa Alises Núñez
+  #twitter: dinesh_MKD
+  url: https://github.com/Creanyx0
+
+ioritz_elisa:
+  name: Ioritz Urrestarazu Simón & Elisa Alises Núñez
+  #twitter: cotes2020
+  url: https://ioritz1993.github.io/posts/welcome/
