@@ -3,7 +3,7 @@
 icon: fas fa-info-circle
 order: 5
 ---
-|![About us](https://raw.githubusercontent.com/ioritz1993/ioritz1993.github.io/main/assets/img/about-us.png)|
+![About us](https://raw.githubusercontent.com/ioritz1993/ioritz1993.github.io/main/assets/img/about-us.png)
 
 Thank you for visiting our cybersecurity blog!
 
