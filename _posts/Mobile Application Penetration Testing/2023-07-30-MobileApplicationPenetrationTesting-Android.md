@@ -14,8 +14,9 @@ pin: true
 * Manifest.xml -> it is a file that contains info about the version of the API used, the architecture (32 or 64) and more. It exists in all the application and it contains the permissions, activities, etc.
 
 	'Permissions' contains the permissions that are required for the app.
-    [Info-each-permission]([https://developer.android.com/reference/android/Manifest.permission](https://developer.android.com/reference/android/Manifest.permission))
-
+	'Permissions' contains the permissions that are required for the app.
+    [Info-each-permission](https://developer.android.com/reference/android/Manifest.permission)
+	
 	'Activities' contains the page of the applications.
 
 	'Content' providers is used to share data from others apps.
