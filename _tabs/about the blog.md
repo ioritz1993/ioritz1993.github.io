@@ -21,3 +21,9 @@ As true cybersecurity aficionados, we understand the importance of staying ahead
 Join us on this extraordinary journey to the heart of pentesting and cybersecurity. Together, we'll take on challenges, celebrate successes, and forge a path towards a safer digital world. Subscribe to our blog now and embark on an unforgettable journey of discovery!
 
 *Adventure awaits! Join our passionate community and unleash your cybersecurity magic!* 🔐💻🌟
+
+**This blog can be displayed on both GitHub accounts:**
+
+- [https://creanyx0.github.io](https://creanyx0.github.io)
+- [https://ioritz1993.github.io](https://ioritz1993.github.io)
+
